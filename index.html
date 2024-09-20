@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="/js/script.js"></script>
+    
+    </head>
+<body class="bg-gray-100">
+    <nav class="w-full h-[10vh] bg-green-500 flex items-center justify-between px-6 text-white">
+        <div class="flex items-center gap-4">
+            <img class="w-[50px] h-[50px] object-cover rounded-full" src="./messageImage.jpg" alt="Logo">
+            <h2 class="text-2xl font-semibold">Messenger</h2>
+        </div>
+    </nav>
+
+    <div class="w-full h-[80vh] flex flex-col justify-between px-6 py-4">
+        <div id="chat-window" class="flex-1 overflow-y-scroll bg-white p-4 rounded-lg shadow-lg">
+            <div  class="flex items-center mb-4">
+                <div class="bg-blue-500 text-white py-2 px-4 rounded-lg max-w-[60%]">
+                    <p><strong>Sameer:</strong> Hii</p>
+                </div>
+            </div>
+            <div  class="flex items-center mb-4">
+                <div class="bg-blue-500 text-white py-2 px-4 rounded-lg max-w-[60%]">
+                    <p><strong>Sameer:</strong> Hii</p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-end mb-4">
+                <div class="bg-gray-200 py-2 px-4 rounded-lg max-w-[60%] text-right">
+                    <p><strong>Saurabh:</strong> Hii</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full flex items-center gap-4 mt-4">
+            <form action="" id="messageSender">
+            <input id="messageInput" type="text" placeholder="Type a message..." class="flex-1 p-3 border border-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
+            <button id="sendButton" class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600">Send</button>
+        </form>
+        </div>
+    </div>
+   
+</body>
+</html>
